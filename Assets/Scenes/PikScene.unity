@@ -514,7 +514,7 @@ MonoBehaviour:
     m_MaxSpeed: 300
     m_AccelTime: 0.1
     m_DecelTime: 0.1
-    m_InputAxisName: Mouse X
+    m_InputAxisName: CameraX
     m_InputAxisValue: 0
     m_InvertInput: 1
     m_MinValue: -180
@@ -610,8 +610,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 727615888}
-  m_LocalRotation: {x: 0.25321403, y: -0.0000000083228935, z: 0.0000000021784738,
-    w: 0.9674103}
+  m_LocalRotation: {x: 0.25321403, y: 0.000000008322814, z: -0.0000000021784434, w: 0.9674103}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -716,7 +715,7 @@ MonoBehaviour:
     m_MaxSpeed: 300
     m_AccelTime: 0.1
     m_DecelTime: 0.1
-    m_InputAxisName: Mouse X
+    m_InputAxisName: CameraX
     m_InputAxisValue: 0
     m_InvertInput: 1
     m_MinValue: -180
@@ -913,7 +912,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1149864010}
-  m_LocalRotation: {x: 0.25321406, y: -0.000000016645668, z: 0.0000000043569077, w: 0.9674103}
+  m_LocalRotation: {x: 0.25321406, y: 0.000000016645632, z: -0.000000004356898, w: 0.9674103}
   m_LocalPosition: {x: 0, y: 6.12, z: -8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1025,7 +1024,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1330209443}
-  m_LocalRotation: {x: 0.23070614, y: -2.6722724e-14, z: 8.310724e-14, w: 0.97302353}
+  m_LocalRotation: {x: 0.23070616, y: 0.000000032421102, z: -0.00000000768693, w: 0.97302353}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1130,7 +1129,7 @@ MonoBehaviour:
     m_MaxSpeed: 300
     m_AccelTime: 0.1
     m_DecelTime: 0.1
-    m_InputAxisName: Mouse X
+    m_InputAxisName: CameraX
     m_InputAxisValue: 0
     m_InvertInput: 1
     m_MinValue: -180
@@ -1249,7 +1248,7 @@ MonoBehaviour:
     m_MaxSpeed: 2
     m_AccelTime: 0.2
     m_DecelTime: 0.1
-    m_InputAxisName: Mouse Y
+    m_InputAxisName: CameraY
     m_InputAxisValue: 0
     m_InvertInput: 0
     m_MinValue: 0
@@ -1272,7 +1271,7 @@ MonoBehaviour:
     m_MaxSpeed: 300
     m_AccelTime: 0.1
     m_DecelTime: 0.1
-    m_InputAxisName: Mouse X
+    m_InputAxisName: CameraX
     m_InputAxisValue: 0
     m_InvertInput: 1
     m_MinValue: -180
