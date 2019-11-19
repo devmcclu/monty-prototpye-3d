@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovementScript : MonoBehaviour
+public class GummyMovementScript : MonoBehaviour
 {
     public float speed = 10f;
 
