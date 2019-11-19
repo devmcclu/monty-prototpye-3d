@@ -18,7 +18,8 @@ public class GummyFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, leader.position, speed);
+        if(transform.position != leader.position)
+            transform.position = Vector3.MoveTowards(transform.position, leader.position, speed);
     }
     
     void FixedUpdate()
