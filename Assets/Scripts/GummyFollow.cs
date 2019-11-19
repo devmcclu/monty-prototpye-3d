@@ -8,6 +8,8 @@ public class GummyFollow : MonoBehaviour
     //public float followSharpness = 0.1f;
     //Vector3 _followOffset;
     public float speed = 1f;
+
+    public bool followPlayer = true;
     
     // Start is called before the first frame update
     void Start()
@@ -18,8 +20,10 @@ public class GummyFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(transform.position != leader.position)
+        if(transform.position != leader.position && followPlayer == true)
+        {
             transform.position = Vector3.MoveTowards(transform.position, leader.position, speed);
+        }
     }
     
     void FixedUpdate()
