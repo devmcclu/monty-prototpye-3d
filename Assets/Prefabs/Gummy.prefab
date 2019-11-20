@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 466c092d6afd05643bc7897378686e88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leader: {fileID: 0}
+  followPosition: {fileID: 0}
   player: {fileID: 0}
   speed: 1
   maxDistance: 10

@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
                 if (followers[i].followPlayer == true)
                 {
                     followers[i].followPlayer = false;
-                    break;
+                    return;
                 }
             }
         }
