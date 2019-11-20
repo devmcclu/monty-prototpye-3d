@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 input;
     private Quaternion freeRotation;
     private Camera mainCamera;
+    private bool fired;
     
 
     // Start is called before the first frame update
@@ -35,12 +36,15 @@ public class PlayerController : MonoBehaviour
         {
             for(int i = 0; i < followers.Count; i++)
             {
-                if (followers[i].followPlayer == true)
+                if (followers[i].followPlayer == true && fired == false)
                 {
+                    fired = true;
                     followers[i].followPlayer = false;
-                    return;
+                    followers.RemoveAt(i);
                 }
+                if (fired == true) break;
             }
+            fired = false;
         }
     }
 
