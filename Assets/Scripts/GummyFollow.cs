@@ -22,7 +22,6 @@ public class GummyFollow : MonoBehaviour
     {
         //Add the Gummy to the player's list of followers
         player = FindObjectOfType<PlayerController>();
-        //player.followers.Add(this);
     }
 
     // Update is called once per frame
@@ -43,7 +42,6 @@ public class GummyFollow : MonoBehaviour
                 speed = 10;
                 float dirZ = speed * Time.deltaTime;
                 //Walk forawrd
-                //transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + dirZ);
                 transform.position += playerForward * speed * Time.deltaTime;
                 //Once reached max distance, go back to player
                 if(Vector3.Distance(transform.position, followPosition.position) > maxDistance)
