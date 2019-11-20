@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    //Speed of the player
     public float speed = 10f;
-    private float turnSpeedMultiplier;
+    //Turn speed of the camera
     public float turnSpeed = 10f;
+    //List of gummies following the player
+    public List<GummyFollow> followers;
 
+    private float turnSpeedMultiplier;
     private CharacterController characterController;
     private Vector3 targetDirection;
+    //Movement input of the player
     private Vector2 input;
     private Quaternion freeRotation;
     private Camera mainCamera;
@@ -25,11 +30,23 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //Tell the first gummy following the player to walk forward
+        if(Input.GetAxis("Fire1") > 0)
+        {
+            for(int i = 0; i < followers.Count; i++)
+            {
+                if (followers[i].followPlayer == true)
+                {
+                    followers[i].followPlayer = false;
+                    break;
+                }
+            }
+        }
     }
 
     void FixedUpdate()
     {
+        //Get the input of the player
         input.Set(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         characterController.SimpleMove(targetDirection * speed);
         // Update target direction relative to the camera view (or not if the Keep Direction option is checked)
