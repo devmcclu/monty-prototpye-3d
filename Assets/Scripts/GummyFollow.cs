@@ -40,11 +40,13 @@ public class GummyFollow : MonoBehaviour
             speed = 10;
             float dirZ = speed * Time.deltaTime;
             //Walk forawrd
-            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + dirZ);
+            //transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + dirZ);
+            transform.position += player.transform.forward * speed * Time.deltaTime;
             //Once reached max distance, go back to player
             if(Vector3.Distance(transform.position, followPosition.position) > maxDistance)
             {
                 speed = 1;
+                player.followers.Add(this);
                 followPlayer = true;
             }
         }
