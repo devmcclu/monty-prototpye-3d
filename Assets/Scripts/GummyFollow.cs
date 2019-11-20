@@ -15,13 +15,14 @@ public class GummyFollow : MonoBehaviour
     public bool followPlayer = true;
     //Is it stopped?
     public bool stop = false;
+    public Vector3 playerForward;
     
     // Start is called before the first frame update
     void Start()
     {
         //Add the Gummy to the player's list of followers
         player = FindObjectOfType<PlayerController>();
-        player.followers.Add(this);
+        //player.followers.Add(this);
     }
 
     // Update is called once per frame
@@ -29,26 +30,35 @@ public class GummyFollow : MonoBehaviour
     {
         //If the gummy is allowed to follow the player and is not
         //At the follow position
-        if(transform.position != followPosition.position && followPlayer == true)
+        if(followPosition != null)
         {
-            //Move to the follow position
-            transform.position = Vector3.MoveTowards(transform.position, followPosition.position, speed);
-        }
-        //If told to move somewhere and not at the stop point
-        else if (followPlayer == false && stop == false)
-        {
-            speed = 10;
-            float dirZ = speed * Time.deltaTime;
-            //Walk forawrd
-            //transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + dirZ);
-            transform.position += player.transform.forward * speed * Time.deltaTime;
-            //Once reached max distance, go back to player
-            if(Vector3.Distance(transform.position, followPosition.position) > maxDistance)
+            if(transform.position != followPosition.position && followPlayer == true)
             {
-                speed = 1;
-                player.followers.Add(this);
-                followPlayer = true;
+                //Move to the follow position
+                transform.position = Vector3.MoveTowards(transform.position, followPosition.position, speed);
+            }
+            //If told to move somewhere and not at the stop point
+            else if (followPlayer == false && stop == false)
+            {
+                speed = 10;
+                float dirZ = speed * Time.deltaTime;
+                //Walk forawrd
+                //transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + dirZ);
+                transform.position += playerForward * speed * Time.deltaTime;
+                //Once reached max distance, go back to player
+                if(Vector3.Distance(transform.position, followPosition.position) > maxDistance)
+                {
+                    speed = 1;
+                    AddGummy();
+                    followPlayer = true;
+                }
             }
         }
+    }
+
+    public void AddGummy()
+    {
+        player.followers.Add(this);
+        followPosition = player.followPoint;
     }
 }

@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     public float turnSpeed = 10f;
     //List of gummies following the player
     public List<GummyFollow> followers;
+    //GameObject that the gummies follow    
+    public Transform followPoint;
 
     private float turnSpeedMultiplier;
     private CharacterController characterController;
@@ -40,6 +42,7 @@ public class PlayerController : MonoBehaviour
                 {
                     fired = true;
                     followers[i].followPlayer = false;
+                    followers[i].playerForward = transform.forward;
                     followers.RemoveAt(i);
                 }
                 if (fired == true) break;
