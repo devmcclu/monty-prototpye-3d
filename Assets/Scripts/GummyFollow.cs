@@ -4,37 +4,49 @@ using UnityEngine;
 
 public class GummyFollow : MonoBehaviour
 {
-    public Transform leader;
-    //public float followSharpness = 0.1f;
-    //Vector3 _followOffset;
+    //Where the gummy should follow
+    public Transform followPosition;
+    public PlayerController player;
+    //Speed of the gummy
     public float speed = 1f;
-
+    //How far away the gummy can be from the follow point
+    public float maxDistance = 10f;
+    //should it follow the player?
     public bool followPlayer = true;
+    //Is it stopped?
+    public bool stop = false;
     
     // Start is called before the first frame update
     void Start()
     {
-        //_followOffset = transform.position - leader.position;
+        //Add the Gummy to the player's list of followers
+        player = FindObjectOfType<PlayerController>();
+        player.followers.Add(this);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(transform.position != leader.position && followPlayer == true)
+        //If the gummy is allowed to follow the player and is not
+        //At the follow position
+        if(transform.position != followPosition.position && followPlayer == true)
         {
-            transform.position = Vector3.MoveTowards(transform.position, leader.position, speed);
+            //Move to the follow position
+            transform.position = Vector3.MoveTowards(transform.position, followPosition.position, speed);
         }
-    }
-    
-    void FixedUpdate()
-    {
-        // Apply that offset to get a target position.
-        //Vector3 targetPosition = leader.position + _followOffset;
-
-        // Keep our y position unchanged.
-        //targetPosition.y = transform.position.y;
-
-        // Smooth follow.    
-        //transform.position += (targetPosition - transform.position) * followSharpness;
+        //If told to move somewhere and not at the stop point
+        else if (followPlayer == false && stop == false)
+        {
+            speed = 10;
+            float dirZ = speed * Time.deltaTime;
+            //Walk forawrd
+            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + dirZ);
+            //Once reached max distance, go back to player
+            if(Vector3.Distance(transform.position, followPosition.position) > maxDistance)
+            {
+                speed = 1;
+                followPlayer = true;
+            }
+        }
     }
 }
