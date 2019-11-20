@@ -27,9 +27,12 @@ public class EnvironmentCollider : MonoBehaviour
         Debug.Log("What this?");
         if(other.gameObject.CompareTag("Gummy"))
         {
-            Debug.Log("GUMMY HIT");
-            other.GetComponent<GummyFollow>().stop = true;
-            gummies.Add(other.GetComponent<GummyFollow>());
+            if(other.GetComponent<GummyFollow>().followPlayer == false)
+            {
+                Debug.Log("GUMMY HIT");
+                other.GetComponent<GummyFollow>().stop = true;
+                gummies.Add(other.GetComponent<GummyFollow>());
+            }
         }
     }
 }
