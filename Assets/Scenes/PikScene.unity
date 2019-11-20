@@ -926,6 +926,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ef571ecbdd746c449007df0f7794deb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gummies: []
+  ladder: {fileID: 5657666405403260111, guid: d1fc5caa965c71d49807f39e9b02a8cf, type: 3}
 --- !u!65 &1104369056
 BoxCollider:
   m_ObjectHideFlags: 0
