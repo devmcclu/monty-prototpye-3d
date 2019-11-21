@@ -40,7 +40,7 @@ public class GummyFollow : MonoBehaviour
             else if (followPlayer == false && stop == false)
             {
                 speed = 10;
-                float dirZ = speed * Time.deltaTime;
+                //float dirZ = speed * Time.deltaTime;
                 //Walk forawrd
                 transform.position += playerForward * speed * Time.deltaTime;
                 //Once reached max distance, go back to player
