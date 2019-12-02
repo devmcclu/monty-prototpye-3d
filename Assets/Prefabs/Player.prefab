@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 8473617684758794266}
   - component: {fileID: 8473617684758794270}
   - component: {fileID: 8473617684758794257}
+  - component: {fileID: 407625195}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -158,3 +159,18 @@ MonoBehaviour:
   speed: 10
   turnSpeed: 10
   followers: []
+  followPoint: {fileID: 8473617684410262605}
+--- !u!114 &407625195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8473617684758794267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c82c1889f3608bc459aa0d47b078d363, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  startingHealth: 100
