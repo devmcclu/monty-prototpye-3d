@@ -298,6 +298,7 @@ GameObject:
   - component: {fileID: 322815143}
   - component: {fileID: 322815142}
   - component: {fileID: 322815141}
+  - component: {fileID: 322815145}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -372,12 +373,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 322815140}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.2, y: 1.47, z: 4.09}
+  m_LocalPosition: {x: -10.75, y: 1.2, z: 6.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &322815145
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322815140}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 0.71, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &395610485
 GameObject:
   m_ObjectHideFlags: 0

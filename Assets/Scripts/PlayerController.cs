@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         //Tell the first gummy following the player to walk forward
-        if(Input.GetAxis("Fire1") > 0)
+        if(Input.GetButtonDown("Fire1"))
         {
             for(int i = 0; i < followers.Count; i++)
             {
