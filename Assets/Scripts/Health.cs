@@ -22,5 +22,9 @@ public class Health : MonoBehaviour
     public void HealthDamage(int amount)
     {
         health -= amount;
+        if(health <= 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
