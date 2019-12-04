@@ -5,19 +5,21 @@ using UnityEngine;
 public class EnvironmentCollider : MonoBehaviour
 {
     public List<GummyFollow> gummies;
-    public GameObject ladder;
+    public GameObject gummyItem;
+
+    public int gummiesNeeded = 3;
     void Update()
     {
-        if(gummies.Count >= 3)
+        if(gummies.Count >= gummiesNeeded)
         {
-            for(int i = 0; i < 3; i++)
+            for(int i = 0; i < gummiesNeeded; i++)
             {
                 GummyFollow currentGummy = gummies[0];
                 gummies.RemoveAt(0);
                 Destroy(currentGummy.gameObject);
             }
 
-            Instantiate(ladder);
+            Instantiate(gummyItem, this.transform.position, gummyItem.transform.rotation);
         }
     }
 
