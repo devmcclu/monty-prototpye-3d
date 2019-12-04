@@ -2403,7 +2403,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gummies: []
-  gummyItem: {fileID: 5657666405403260111, guid: d1fc5caa965c71d49807f39e9b02a8cf,
+  gummyItem: {fileID: 964181986397571523, guid: 2b96235f5772c1346905f8d5ebd88f67,
     type: 3}
   gummiesNeeded: 2
 --- !u!65 &1573545978
@@ -2427,7 +2427,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1573545976}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.85, y: 1.17, z: 6.14}
+  m_LocalPosition: {x: 6.85, y: 1.17, z: 5.39}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

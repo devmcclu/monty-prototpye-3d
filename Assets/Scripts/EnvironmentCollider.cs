@@ -20,6 +20,7 @@ public class EnvironmentCollider : MonoBehaviour
             }
 
             Instantiate(gummyItem, this.transform.position, gummyItem.transform.rotation);
+            Destroy(this.gameObject);
         }
     }
 

@@ -6,6 +6,7 @@ public class AttackArea : MonoBehaviour
 {
     public float timer;
     public List<GummyFollow> gummies;
+    
     // Start is called before the first frame update
     // void Start()
     // {
