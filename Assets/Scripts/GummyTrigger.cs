@@ -13,8 +13,11 @@ public class GummyTrigger : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject == followScipt.player.gameObject)
+        if(other.gameObject == followScipt.player.gameObject &&
+            !other.GetComponent<PlayerController>().followers.Contains(followScipt) &&
+            followScipt.followPlayer == true)
         {
+            Debug.Log("Help");
             followScipt.AddGummy();
         }
     }
