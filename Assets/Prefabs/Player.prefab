@@ -160,6 +160,7 @@ MonoBehaviour:
   turnSpeed: 10
   followers: []
   followPoint: {fileID: 8473617684410262605}
+  gummyText: {fileID: 0}
 --- !u!114 &407625195
 MonoBehaviour:
   m_ObjectHideFlags: 0
