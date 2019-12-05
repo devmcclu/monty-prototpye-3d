@@ -11,23 +11,16 @@ public class TargetScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine("DelayStart");
-        //targetLight1.color = Color.green;
-        //targetLight2.color = Color.green;
-
-        //doorAnim.enabled = true;
     }
 
     // Update is called once per frame
     void Update()
-    {
-        
+    { 
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("trigerr");
-        if (other.gameObject.CompareTag("slingshot"))
+        if (collision.gameObject.CompareTag("slingshot"))
         {
 
             targetLight1.color = Color.green;
@@ -36,16 +29,6 @@ public class TargetScript : MonoBehaviour
             doorAnim.enabled = true;
 
         }
-    }
-
-    IEnumerator DelayStart() {
-
-        yield return new WaitForSeconds(3);
-
-        targetLight1.color = Color.green;
-        targetLight2.color = Color.green;
-
-        doorAnim.enabled = true;
     }
 
 }
