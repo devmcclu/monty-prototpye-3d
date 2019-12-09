@@ -18,9 +18,10 @@ public class TargetScript : MonoBehaviour
     { 
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Gummy"))
+        Debug.Log("Help");
+        if (other.gameObject.CompareTag("Gummy"))
         {
 
             targetLight1.color = Color.green;
