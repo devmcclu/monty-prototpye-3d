@@ -13,12 +13,14 @@ public class GummyTrigger : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        //If the gummy collides with the player and is not in the follower list
         if(other.gameObject == followScipt.player.gameObject &&
-            !other.GetComponent<PlayerController>().followers.Contains(followScipt) &&
-            followScipt.followPlayer == true)
+            !other.GetComponent<PlayerController>().followers.Contains(followScipt))
+            //&& followScipt.followPlayer == true)
         {
             Debug.Log("Help");
             followScipt.AddGummy();
+            followScipt.followPlayer = true;
         }
     }
 }
