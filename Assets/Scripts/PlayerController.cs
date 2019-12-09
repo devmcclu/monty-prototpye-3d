@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class PlayerController : MonoBehaviour
     public List<GummyFollow> followers;
     //GameObject that the gummies follow    
     public Transform followPoint;
+    public Transform onDeck;
+    public Text gummyText;
 
     private float turnSpeedMultiplier;
     private CharacterController characterController;
@@ -28,6 +31,7 @@ public class PlayerController : MonoBehaviour
     {
         characterController = GetComponent<CharacterController>();
         mainCamera = Camera.main;
+        UpdateGummyCount();
     }
 
     // Update is called once per frame
@@ -44,6 +48,7 @@ public class PlayerController : MonoBehaviour
                     followers[i].followPlayer = false;
                     followers[i].playerForward = transform.forward;
                     followers.RemoveAt(i);
+                    UpdateGummyCount();
                 }
                 if (fired == true) break;
             }
@@ -84,5 +89,9 @@ public class PlayerController : MonoBehaviour
 
         // determine the direction the player will face based on input and the referenceTransform's right and forward directions
         targetDirection = input.x * right + input.y * forward;
+    }
+
+    public void UpdateGummyCount(){
+        gummyText.text = "Gummies: " +  followers.Count.ToString();
     }
 }

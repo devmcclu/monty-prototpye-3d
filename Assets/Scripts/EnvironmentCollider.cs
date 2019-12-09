@@ -4,22 +4,28 @@ using UnityEngine;
 
 public class EnvironmentCollider : MonoBehaviour
 {
+    //Gummies in area
     public List<GummyFollow> gummies;
+    //Item to be spawned when enough gummies are there
     public GameObject gummyItem;
-
+    //Gummies required to make the item
     public int gummiesNeeded = 3;
+    
     void Update()
     {
+        //If enough gummies are in the area
         if(gummies.Count >= gummiesNeeded)
         {
+            //Go through the gummies needed, remove them from the list, and destroy them
             for(int i = 0; i < gummiesNeeded; i++)
             {
                 GummyFollow currentGummy = gummies[0];
                 gummies.RemoveAt(0);
                 Destroy(currentGummy.gameObject);
             }
-
+            //Make the item
             Instantiate(gummyItem, this.transform.position, gummyItem.transform.rotation);
+            //Destroy the collider area
             Destroy(this.gameObject);
         }
     }

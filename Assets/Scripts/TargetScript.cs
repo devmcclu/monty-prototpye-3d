@@ -20,7 +20,7 @@ public class TargetScript : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("slingshot"))
+        if (collision.gameObject.CompareTag("Gummy"))
         {
 
             targetLight1.color = Color.green;
