@@ -57,6 +57,13 @@ public class GummyFollow : MonoBehaviour
     public void AddGummy()
     {
         player.followers.Add(this);
+        UpdateFollowPosition();
+        player.UpdateGummyCount();
+    }
+
+    public void UpdateFollowPosition()
+    {
+        this.stop = false;
         if (this == player.followers[0])
         {
             followPosition = player.onDeck;
@@ -65,7 +72,5 @@ public class GummyFollow : MonoBehaviour
         {
             followPosition = player.followPoint;
         }
-        
-        player.UpdateGummyCount();
     }
 }
