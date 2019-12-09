@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public List<GummyFollow> followers;
     //GameObject that the gummies follow    
     public Transform followPoint;
+    public Transform onDeck;
     public Text gummyText;
 
     private float turnSpeedMultiplier;
