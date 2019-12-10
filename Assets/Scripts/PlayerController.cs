@@ -91,7 +91,12 @@ public class PlayerController : MonoBehaviour
         targetDirection = input.x * right + input.y * forward;
     }
 
-    public void UpdateGummyCount(){
+    public void UpdateGummyCount()
+    {
         gummyText.text = "Gummies: " +  followers.Count.ToString();
+        for (int i = 0; i < followers.Count; i++)
+        {
+            followers[i].UpdateFollowPosition();
+        }
     }
 }
