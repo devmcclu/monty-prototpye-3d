@@ -3575,14 +3575,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 158948067, guid: 2f1b2de7db6befa4aba651e9ab02dfda, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 158948067, guid: 2f1b2de7db6befa4aba651e9ab02dfda, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.75
-      objectReference: {fileID: 0}
     - target: {fileID: 8473617684758794257, guid: 2f1b2de7db6befa4aba651e9ab02dfda,
         type: 3}
       propertyPath: gummyText
