@@ -7,10 +7,16 @@ public class TargetScript : MonoBehaviour
     public Light targetLight1;
     public Light targetLight2;
     public Animator doorAnim;
+    public Animator levelDoorAnim;
     
     // Start is called before the first frame update
     void Start()
     {
+        //targetLight1.color = Color.green;
+        //targetLight2.color = Color.green;
+
+        //doorAnim.enabled = true;
+        //levelDoorAnim.enabled = true;
     }
 
     // Update is called once per frame
@@ -28,6 +34,7 @@ public class TargetScript : MonoBehaviour
             targetLight2.color = Color.green;
 
             doorAnim.enabled = true;
+            levelDoorAnim.enabled = true;
 
         }
     }
