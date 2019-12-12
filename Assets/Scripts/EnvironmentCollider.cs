@@ -10,6 +10,7 @@ public class EnvironmentCollider : MonoBehaviour
     public GameObject gummyItem;
     //Gummies required to make the item
     public int gummiesNeeded = 3;
+    public Transform spawnPoint;
     
     void Update()
     {
@@ -24,7 +25,7 @@ public class EnvironmentCollider : MonoBehaviour
                 Destroy(currentGummy.gameObject);
             }
             //Make the item
-            Instantiate(gummyItem, this.transform.position, gummyItem.transform.rotation);
+            Instantiate(gummyItem, spawnPoint.position, gummyItem.transform.rotation);
             //Destroy the collider area
             Destroy(this.gameObject);
         }
