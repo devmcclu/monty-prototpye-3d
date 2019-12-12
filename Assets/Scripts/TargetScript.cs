@@ -27,7 +27,7 @@ public class TargetScript : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Help");
-        if (other.gameObject.CompareTag("Gummy"))
+        if (other.gameObject.CompareTag("Player"))
         {
 
             targetLight1.color = Color.green;
