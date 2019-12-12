@@ -6374,7 +6374,7 @@ PrefabInstance:
     - target: {fileID: 7729956320055864743, guid: e4bd04b3d72bb0249884f70c802b3f0c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.78
+      value: 2.57
       objectReference: {fileID: 0}
     - target: {fileID: 7729956320055864743, guid: e4bd04b3d72bb0249884f70c802b3f0c,
         type: 3}
@@ -7005,6 +7005,21 @@ PrefabInstance:
       propertyPath: levelDoorAnim
       value: 
       objectReference: {fileID: 28311325}
+    - target: {fileID: 3720443666479239511, guid: 945439ee719669f4b8e47ea47e2dc0b2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a82af6e7aca6a164a927da427f95dd06, type: 2}
+    - target: {fileID: 3720443667724550786, guid: 945439ee719669f4b8e47ea47e2dc0b2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a82af6e7aca6a164a927da427f95dd06, type: 2}
+    - target: {fileID: 3720443667887090098, guid: 945439ee719669f4b8e47ea47e2dc0b2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a82af6e7aca6a164a927da427f95dd06, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 945439ee719669f4b8e47ea47e2dc0b2, type: 3}
 --- !u!4 &225661201 stripped
@@ -47958,7 +47973,7 @@ PrefabInstance:
     - target: {fileID: 7729956320055864743, guid: e4bd04b3d72bb0249884f70c802b3f0c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.56
+      value: 2.52
       objectReference: {fileID: 0}
     - target: {fileID: 7729956320055864743, guid: e4bd04b3d72bb0249884f70c802b3f0c,
         type: 3}
