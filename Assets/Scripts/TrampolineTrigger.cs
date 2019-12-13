@@ -11,7 +11,7 @@ public class TrampolineTrigger : MonoBehaviour
         if(other.gameObject.CompareTag("Player"))
         {
             CharacterController playerRb = other.GetComponent<CharacterController>();
-            playerRb.Move(new Vector3(0, 10, 0));
+            playerRb.Move(new Vector3(0, 15, 0));
 
         }
     }
