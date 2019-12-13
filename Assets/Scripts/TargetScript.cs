@@ -29,12 +29,14 @@ public class TargetScript : MonoBehaviour
         Debug.Log("Help");
         if (other.gameObject.CompareTag("Gummy"))
         {
+            if(other.gameObject.GetComponent<GummyFollow>().followPlayer == false)
+            {
+                targetLight1.color = Color.green;
+                targetLight2.color = Color.green;
 
-            targetLight1.color = Color.green;
-            targetLight2.color = Color.green;
-
-            doorAnim.enabled = true;
-            levelDoorAnim.enabled = true;
+                doorAnim.enabled = true;
+                levelDoorAnim.enabled = true;
+            }
 
         }
     }
