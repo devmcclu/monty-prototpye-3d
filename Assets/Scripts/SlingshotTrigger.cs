@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SlingshotTrigger : MonoBehaviour
 {   
+    public float power = 200;
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("What this?");
@@ -19,7 +20,7 @@ public class SlingshotTrigger : MonoBehaviour
                 //Shoot the gummy using physics
                 Rigidbody gummyRb = gummy.GetComponent<Rigidbody>();
                 gummyRb.isKinematic = false;
-                gummyRb.AddForce(new Vector3(0, 250, 250));
+                gummyRb.AddForce(new Vector3(0, power, power));
                 //gummies.Add(gummy);
             }
         }
